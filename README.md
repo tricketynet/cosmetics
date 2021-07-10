@@ -1,0 +1,1 @@
+![continuous delivery](https://github.com/tricketynet/cosmetics/actions/workflows/production.yaml/badge.svg)

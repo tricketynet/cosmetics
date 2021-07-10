@@ -1,0 +1,26 @@
+name: Staging
+on:
+  push:
+    branches-ignore:
+      - master
+jobs:
+  run:
+    name: Continuous integration
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v2
+      - name: Set up JDK 1.15
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '15'
+      - name: Setup maven cache
+        uses: actions/cache@v2.1.6
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: Build project
+        run: mvn clean test
