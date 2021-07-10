@@ -1,11 +1,11 @@
-name: Production
+name: Continuous delivery
 on:
   push:
     branches:
       - master
 jobs:
   run:
-    name: Continuous delivery
+    name: Pipeline
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout project
@@ -27,7 +27,7 @@ jobs:
       - name: Bump version
         run: node version.js --write
       - name: Setup maven config
-        run: sed -i "s/token/${{ secrets.PACKAGES_TOKEN }}/g" settings.xml && cp settings.xml ~/.m2/settings.xml
+        run: sed -i "s/token/${{ secrets.GITHUB_TOKEN }}/g" settings.xml && cp settings.xml ~/.m2/settings.xml
       - name: Setup maven cache
         uses: actions/cache@v2.1.6
         with:

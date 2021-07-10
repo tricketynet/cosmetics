@@ -1,11 +1,11 @@
-name: Staging
+name: Continuous integration
 on:
   push:
     branches-ignore:
       - master
 jobs:
   run:
-    name: Continuous integration
+    name: Pipeline
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout project
