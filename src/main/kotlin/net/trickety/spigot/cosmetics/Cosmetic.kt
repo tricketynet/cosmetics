@@ -15,5 +15,4 @@ abstract class Cosmetic(open val player: Player) {
     open fun destroy() {
         //
     }
-
 }
