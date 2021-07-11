@@ -6,10 +6,10 @@ import org.bukkit.Material
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 
-class Glass(player: Player): Cosmetic(player) {
+class Beacon(player: Player): Cosmetic(player) {
 
     init {
-        this.player.inventory.helmet = ItemStack(Material.GLASS)
+        this.player.inventory.helmet = ItemStack(Material.BEACON)
         Cosmetics.registerCosmetic(this, player)
     }
 

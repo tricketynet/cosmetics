@@ -45,5 +45,4 @@ object Cosmetics: Listener {
     fun onPlayerQuit(event: PlayerQuitEvent) {
         cosmetics.remove(event.player)?.forEach { it.destroy() }
     }
-
 }
