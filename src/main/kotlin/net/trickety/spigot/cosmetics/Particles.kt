@@ -3,7 +3,7 @@ package net.trickety.spigot.cosmetics
 import net.trickety.spigot.cosmetics.particle.*
 import org.bukkit.entity.Player
 
-enum class Particle(private val clazz: Class<out Cosmetic>) {
+enum class Particles(private val clazz: Class<out Cosmetic>) {
 
     BUBBLES(Bubbles::class.java),
     COLORS(Colors::class.java),
