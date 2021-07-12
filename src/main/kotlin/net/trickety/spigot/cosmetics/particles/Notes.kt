@@ -1,4 +1,4 @@
-package net.trickety.spigot.cosmetics.particle
+package net.trickety.spigot.cosmetics.particles
 
 import net.trickety.spigot.cosmetics.Cosmetic
 import net.trickety.spigot.cosmetics.Cosmetics
