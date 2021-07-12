@@ -1,4 +1,4 @@
-package net.trickety.spigot.cosmetics.particle
+package net.trickety.spigot.cosmetics.particles
 
 import net.trickety.spigot.cosmetics.Cosmetic
 import net.trickety.spigot.cosmetics.Cosmetics
@@ -6,7 +6,7 @@ import org.bukkit.Bukkit
 import org.bukkit.Effect
 import org.bukkit.entity.Player
 
-class Villager(player: Player): Cosmetic(player) {
+class Flames(player: Player): Cosmetic(player) {
 
     init {
         Cosmetics.registerCosmetic(this, player)
@@ -15,7 +15,7 @@ class Villager(player: Player): Cosmetic(player) {
     override fun onPlayerMove() {
         Bukkit.getOnlinePlayers().forEach { players ->
             if (!players.canSee(player) && player != players) return@forEach
-            players.playEffect(player.location.add(0.0, 0.2, 0.0), Effect.HAPPY_VILLAGER, 0)
+            players.playEffect(player.location.add(0.0, 0.2, 0.0), Effect.MOBSPAWNER_FLAMES, 0)
         }
         super.onPlayerMove()
     }

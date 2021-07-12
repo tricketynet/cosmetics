@@ -1,6 +1,6 @@
 package net.trickety.spigot.cosmetics
 
-import net.trickety.spigot.cosmetics.particle.*
+import net.trickety.spigot.cosmetics.particles.*
 import org.bukkit.entity.Player
 
 enum class Particles(private val clazz: Class<out Cosmetic>) {
